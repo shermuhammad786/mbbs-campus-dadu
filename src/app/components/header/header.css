@@ -1,0 +1,29 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-image {
+  width: 100%;
+  height: 89vh;
+  background-image: url("/Asset/itians.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-heading {
+  font-size: 50px;
+  color: white;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(51, 225, 225, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
