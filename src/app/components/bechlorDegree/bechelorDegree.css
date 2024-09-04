@@ -38,8 +38,9 @@
   background-color: rgba(25, 225, 225, 0.4);
   transition-duration: 0.4s;
   padding: 10px;
+  border-radius: 10px;
 }
-.degree-info:hover .degree-info div:first-child img {
+.degree-info:hover .image {
   transform: scale(1.1);
 }
 

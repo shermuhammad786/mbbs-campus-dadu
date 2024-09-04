@@ -8,7 +8,7 @@ export default function BechelorDegree({ degree,department,desc }: any) {
                 <div className="degree-info">
 
                     <div>
-                        <img src="/Asset/lab.jpg" alt="" />
+                        <img src="/Asset/lab.jpg" alt="" className="image"/>
                         <p>{degree}</p>
                     </div>
 
