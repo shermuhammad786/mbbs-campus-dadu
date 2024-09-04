@@ -7,6 +7,9 @@ export default function page() {
         <div>
             <Navbar />
             <Header />
+            <br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br />
         </div>
     )
 }
