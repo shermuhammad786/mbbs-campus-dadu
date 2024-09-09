@@ -5,9 +5,14 @@
   flex-wrap: wrap;
   width: 400px;
   height: 400px;
-  /* background-color: rgba(25, 225, 225, 0.2); */
+  /* width: 100%; */
+  /* background-image: url("/Asset/graduation.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  /* background-position: bottom; */
   transition-duration: 0.4s;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .degree {
@@ -15,10 +20,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+    flex-wrap: wrap;
 }
 .degree-container:hover {
-  width: 400px;
-  height: 400px;
   transition-duration: 0.4s;
 }
 .bechelor-degree {
@@ -34,11 +38,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   padding: 5px;
-  background-color: rgba(25, 225, 225, 0.4);
+  background-color: rgba(25, 225, 225, 0.1);
   transition-duration: 0.4s;
   padding: 10px;
   border-radius: 10px;
+}
+.degree-info:hover {
+  background-color: rgba(25, 225, 225, 0.7);
 }
 .degree-info:hover .image {
   transform: scale(1.1);
@@ -106,4 +114,17 @@
   margin-top: 10px;
   font-weight: bolder;
   color: brown;
+}
+
+@media screen and (max-width:417px) {
+    .degree-info div:first-child img{
+      width: 100%;
+    }
+    .degree-info div:first-child{
+      width: 100%;
+    }
+    .degree-container{
+      width: 100%;
+      height: fit-content;
+    }
 }

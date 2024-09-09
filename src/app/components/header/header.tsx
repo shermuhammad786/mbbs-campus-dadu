@@ -5,6 +5,7 @@ export default function Header() {
     return (
         <div className='header-container'>
             <div className='header-image'>
+                <img src="/Asset/itians.jpg" alt="" />
                 <h1 className='header-heading'>Welcome To The MBBS Campus Dadu</h1>
 
             </div>

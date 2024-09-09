@@ -2,23 +2,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   position: relative;
+  width: 100%;
+  height: 100vh;
 }
 .header-image {
   width: 100%;
-  height: 89vh;
-  background-image: url("/Asset/itians.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.header-image {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  /* position: relative; */
+  /* background-image: url("/Asset/itians.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.header-image img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 .header-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   font-size: 50px;
   color: white;
   font-weight: bolder;
@@ -26,7 +40,10 @@
   background-color: rgba(51, 225, 225, 0.7);
   padding: 10px;
   border-radius: 10px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header-cards {
   position: absolute;
@@ -36,4 +53,46 @@
   align-items: center;
   margin: 10px;
   width: 100%;
+}
+
+@media screen and (max-width: 981px) {
+  .header-heading{
+    font-size: 40px;
+    transition-duration: 1s;
+  }
+  .header-container{
+    height: 70vh;
+    transition-duration: 1s;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-heading{
+    font-size: 28px;
+    transition-duration: 1s;
+  }
+   .header-container{
+    height: 60vh;
+    transition-duration: 1s;
+  }
+  
+}
+@media screen and (max-width: 425px) {
+  .header-heading{
+    font-size: 20px;
+    transition-duration: 1s;
+  }
+  .header-container{
+    height: 40vh;
+    transition-duration: 1s;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header-heading{
+    font-size: 15px;
+    transition-duration: 1s;
+  }
+  .header-container{
+    height: 20vh;
+    transition-duration: 1s;
+  }
 }
