@@ -1,0 +1,85 @@
+.forth-semester-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  border-radius: 10px;
+}
+.forth-semester-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.bg-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  border-top-right-radius: 10px;
+  /* border-radius: 20px; */
+  width: 100%;
+  height: 250px;
+  background-image: url("/Asset/computer-networks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.teacher {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  background-color: rgba(25, 225, 225, 0.7);
+}
+.teacher img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.teacher h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.teacher-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(150, 42, 42, 0.9);
+}
+.teacher-time div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.classDesc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.classDesc h1{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.classDesc p{
+    font-size: 17px;
+    font-weight: bold;
+
+}
