@@ -205,8 +205,8 @@
     height: 3px;
   }
   .togle-button{
-   line-height: 0;
-   padding: 0;
+   line-height: 0px;
+   padding: 0px;
    width: 50px;
   }
 }
