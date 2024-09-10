@@ -197,4 +197,16 @@
   .sm-navbar-content{
     width: 90%;
   }
+  .navbar-image img{
+    width: 150px;
+  }
+  .togle-button li{
+    width: 25px;
+    height: 3px;
+  }
+  .togle-button{
+   line-height: 0;
+   padding: 0;
+   width: 50px;
+  }
 }
