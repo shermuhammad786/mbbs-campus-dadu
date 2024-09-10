@@ -3,8 +3,10 @@
   justify-content: center;
   align-items: top;
   width: 100%;
+  flex-wrap: wrap;
   position: fixed;
   z-index: 2;
+  overflow: hidden;
 }
 .sm-navbar-container {
   display: none;
@@ -185,4 +187,14 @@
   margin: 5px;
   border-radius: 5px;
   list-style-type: none;
+}
+
+
+@media screen and (max-width:362px) {
+  .navbar-container{
+    width: 100%;
+  }
+  .sm-navbar-content{
+    width: 90%;
+  }
 }

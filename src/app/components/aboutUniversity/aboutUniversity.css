@@ -152,9 +152,11 @@
 @media screen and (max-width: 1248px) {
   .about-uni-container{
     height: 100%;
+    width: 100%;
   }
   .about-uni-subContainer{
     flex-direction: column;
+    width: 100%;
     height: 100%;
   }
   .about-uni-para-desc{

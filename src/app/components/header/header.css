@@ -92,7 +92,8 @@
     transition-duration: 1s;
   }
   .header-container{
-    height: 20vh;
+    height: 40vh;
+    width: 100%;
     transition-duration: 1s;
   }
 }

@@ -8,7 +8,7 @@ import BestFeatures from "./components/bestFeatures/bestFeatures";
 import Footer from "./components/footer/footer";
 export default function Home() {
   return (
-    <main className="">
+    <main style={{overflow:"hidden"}}>
       <Navbar />
       <Header />
       <AboutUniversity />
