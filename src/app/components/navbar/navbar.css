@@ -19,6 +19,7 @@
   height: 70px;
   background-color: rgba(51, 225, 225, 0.7);
 }
+
 .navbar-image img {
   width: 200px;
 }
@@ -26,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   height: 100%;
 }
 .navbar-content ul {
