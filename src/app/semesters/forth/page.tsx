@@ -6,18 +6,30 @@ import Forth from "@/app/components/semesters/forth/forth";
 import { CldImage } from 'next-cloudinary';
 
 import './forth.css'
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
+import { uploadPDF } from "@/app/firebase/firebaseFunction";
 export default function Home() {
+    const [file, setFile] = useState<File | null>(null);
+    const uploadFile = () => {
 
+        if (file) {
+            uploadPDF(file, file?.name)
+            console.log(file, "==>>> file");
+        }
+    }
     return (
         <div>
 
-            <Navbar />
+            <input type="file" onChange={(e: ChangeEvent<HTMLInputElement>) => { setFile(e.target.files ? e.target.files[0] : null) }} accept=".pdf" />
+            <button onClick={uploadFile}>upload</button>
+
+            {/* <Navbar />
             <Header />
             <div className="forth-semesters-wrapper">
             <Forth />
             </div>
-            <Footer />
+            <Footer /> */}
         </div>
     )
+
 }
