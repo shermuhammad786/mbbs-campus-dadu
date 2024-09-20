@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import "./navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 export default function Navbar() {
   const [sm_navbar, setSm_navbar] = useState(false)
   return (
@@ -15,7 +16,14 @@ export default function Navbar() {
           <ul>
             <li>Home</li>
             <li>About Us</li>
-            <li>Courses</li>
+            <li className='nav-semester'>Semeters
+              <ul className='nav-sub-semesters'>
+                <li>First Semester</li>
+                <li>Second Semester</li>
+                <li>Third Semester</li>
+                <li><Link href={"/semesters/forth"}>Forth Semester</Link></li>
+              </ul>
+            </li>
             <li>Pages</li>
             <li>Blog</li>
             <li>Contact</li>
@@ -41,7 +49,14 @@ export default function Navbar() {
             <ul>
               <li>Home</li>
               <li>About Us</li>
-              <li>Courses</li>
+              <li className='nav-semester'>Semeters
+                <ul className='nav-sub-semesters sm-nav-sub-semesters'>
+                  <li>First Semester</li>
+                  <li>Second Semester</li>
+                  <li>Third Semester</li>
+                  <li><Link href={"/semesters/forth"}>Forth Semester</Link></li>
+                </ul>
+              </li>
               <li>Pages</li>
               <li>Blog</li>
               <li>Contact</li>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./lectureCard.css"
 import axios from 'axios';
 import Link from 'next/link';
-import DisplayLecture from '@/app/displayLectures/page';
+import DisplayLecture from '@/app/displayLectures/[id]/page';
 export default function LectureCard({ lectureNo, lecture, lectureDescription }: any) {
 
 
@@ -17,7 +17,7 @@ export default function LectureCard({ lectureNo, lecture, lectureDescription }: 
                 <div className="face face2">
                     <div className="content">
                         <p>{lectureDescription}</p>
-                        <Link href={"/displayLectures"} onClick={() => <DisplayLecture pdf={lecture} />} >Read More</Link>
+                        <Link href={`/displayLectures/${lecture}`} key={lecture}>Read More</Link>
                     </div>
                 </div>
             </div>

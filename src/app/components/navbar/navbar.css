@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   position: fixed;
   z-index: 2;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .sm-navbar-container {
   display: none;
@@ -43,8 +43,7 @@
 .navbar-content ul li:hover {
   border-bottom: 2px solid orange;
   cursor: pointer;
-  background-color: rgba(51, 225, 225, 0.9);
-
+  background-color: rgba(150, 42, 42, 0.9);
 }
 .navbar-content ul button {
   background-color: aqua;
@@ -169,7 +168,7 @@
 }
 .togle-button:active {
   animation-name: togle-button;
-  animation-duration: 0.4s;
+  animation-duration: 0.2s !important;
   animation-timing-function: ease-in-out;
   background-color: rgba(150, 42, 42, 0.9);
 }
@@ -190,24 +189,68 @@
   list-style-type: none;
 }
 
-
-@media screen and (max-width:362px) {
-  .navbar-container{
+@media screen and (max-width: 362px) {
+  .navbar-container {
     width: 100%;
   }
-  .sm-navbar-content{
+  .sm-navbar-content {
     width: 90%;
   }
-  .navbar-image img{
+  .navbar-image img {
     width: 150px;
   }
-  .togle-button li{
+  .togle-button li {
     width: 25px;
     height: 3px;
   }
-  .togle-button{
-   line-height: 0px;
-   padding: 0px;
-   width: 50px;
+  .togle-button {
+    line-height: 0px;
+    padding: 0px;
+    width: 50px;
   }
+}
+
+.nav-semester {
+  position: relative;
+
+}
+.nav-sub-semesters {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin: 0px !important;
+  padding: 10px !important;
+  background-color: rgba(51, 225, 225, 0.7);
+  border-radius: 10px;
+  display: none !important;
+}
+.nav-sub-semesters li {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  width: 100%;
+  margin: 10px !important;
+  background-color: aqua;
+}
+
+.nav-semester:hover .nav-sub-semesters{
+  display: flex !important;
+}
+
+
+
+.nav-semester:hover .sm-nav-sub-semesters {
+  display: flex !important;
+  /* background-color: rgba(51, 225, 225, 0.7); */
+  width: 100%;
+  height: fit-content;
+  right: 100% !important;
+  left: unset;
+  top: -10%;
 }
