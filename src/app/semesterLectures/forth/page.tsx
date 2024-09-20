@@ -2,7 +2,7 @@
 import Footer from "@/app/components/footer/footer";
 import Header from "@/app/components/header/header";
 import Navbar from "@/app/components/navbar/page";
-import Forth from "@/app/components/semesters/forth/forth";
+import Forth from "@/app/components/semestersLectures/forth/forth";
 import { CldImage } from 'next-cloudinary';
 
 import './forth.css'
@@ -46,7 +46,7 @@ export default function Home() {
             <Navbar />
             <Header />
             <div className="forth-semesters-wrapper">
-            <Forth />
+                <Forth />
             </div>
             <Footer />
         </div>

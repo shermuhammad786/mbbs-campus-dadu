@@ -1,7 +1,7 @@
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "./firebaseConfig";
 
-export const uploadPDF = (file: any, fileName: any) => {
+export const uploadPDF = async (file: any, fileName: any, setDownloadUrl: any) => {
 
     const storageRef = ref(storage, 'images/' + fileName)
     const uploadTask = uploadBytesResumable(storageRef, file);
@@ -33,6 +33,8 @@ export const uploadPDF = (file: any, fileName: any) => {
         () => {
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 console.log('File available at', downloadURL);
+                setDownloadUrl(downloadURL)
+                return downloadURL
             });
         }
     );
