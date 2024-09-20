@@ -28,6 +28,7 @@ function upload() {
                     pdf: downloadUrl,
                     desc: description
                 })
+                console.log(addPdf);
             }
         }
 
