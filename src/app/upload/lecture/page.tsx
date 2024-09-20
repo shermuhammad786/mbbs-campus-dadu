@@ -1,13 +1,12 @@
 "use client"
-import { DEV_URL, POR_URL } from "@/app/envFiles/env";
+import { PRO_URL } from "@/app/envFiles/env";
 import "./uplaodFile.css"
 import { uploadPDF } from '@/app/firebase/firebaseFunction';
 import axios from 'axios';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 
 function upload() {
-    
-    console.log(DEV_URL);
+
     const [file, setFile] = useState<File | null>(null);
     const [downloadUrl, setDownloadUrl] = useState();
     const [description, setDescription] = useState("");
@@ -24,12 +23,11 @@ function upload() {
         const fetchData = async () => {
 
             if (downloadUrl) {
-                const addPdf = await axios.post(`${POR_URL}/api/pdf`, {
+                const addPdf = await axios.post(`${PRO_URL}/api/pdf`, {
                     subject: className,
                     pdf: downloadUrl,
                     desc: description
                 })
-                console.log(addPdf, " ===>>> added pdf");
             }
         }
 

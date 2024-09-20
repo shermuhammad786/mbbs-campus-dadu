@@ -1,4 +1,5 @@
 "use client"
+import { PRO_URL } from '@/app/envFiles/env';
 import axios from 'axios'
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -10,7 +11,7 @@ function DisplayLecture() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:3421/api/pdf/${id}`)
+            const response = await axios.get(`${PRO_URL}/api/pdf/${id}`)
             setData(response.data.pdf)
         }
         fetchData()

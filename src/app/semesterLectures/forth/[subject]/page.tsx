@@ -9,6 +9,7 @@ import './forth.css'
 import { useState, ChangeEvent, useEffect } from "react";
 import { uploadPDF } from "@/app/firebase/firebaseFunction";
 import axios from "axios";
+import { PRO_URL } from "@/app/envFiles/env";
 
 export default function Home() {
     const [file, setFile] = useState<File | null>(null);
@@ -27,7 +28,7 @@ export default function Home() {
         const fetchData = async () => {
 
             if (downloadUrl) {
-                const addPdf = await axios.post(`http://localhost:3421/api/pdf`, {
+                const addPdf = await axios.post(`${PRO_URL}/api/pdf`, {
                     subject: className,
                     pdf: downloadUrl,
                     desc: description

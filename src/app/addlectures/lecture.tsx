@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { PRO_URL } from '../envFiles/env'
 
 export default function Lecture() {
     const [lecture, setLecture] = useState("")
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("http://localhost:3421/api/pdf")
+            const response = await axios.get(`${PRO_URL}/api/pdf`)
             console.log(response.data);
         }
         fetchData()
