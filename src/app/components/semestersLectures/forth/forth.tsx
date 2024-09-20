@@ -10,7 +10,7 @@ export default function Forth() {
     console.log(subject);
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get(`${PRO_URL}/api/pdf/subject/${subject.toLowerCase()}`);
+            const response = await axios.get(`${PRO_URL}/api/pdf/subject/${subject}`);
             setData(response.data)
         }
         fetchData()
