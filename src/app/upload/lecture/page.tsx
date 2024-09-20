@@ -7,7 +7,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react'
 
 function upload() {
 
-    const [file, setFile] = useState<File | null>(null);
+    const [file, setFile] = useState<File | null>();
     const [downloadUrl, setDownloadUrl] = useState();
     const [description, setDescription] = useState("");
     const [className, setClassName] = useState("");
@@ -28,7 +28,12 @@ function upload() {
                     pdf: downloadUrl,
                     desc: description
                 })
-                console.log(addPdf);
+                if (addPdf.data.status) {
+                    alert(addPdf.data.message)
+                    window.location.reload()
+                } else {
+                    alert(addPdf.data.message)
+                }
             }
         }
 
@@ -38,7 +43,7 @@ function upload() {
     return (
         <div className='w-full flex justify-evenly items-center flex-col uploadFile'>
             <input type="file" onChange={(e: ChangeEvent<HTMLInputElement>) => { setFile(e.target.files ? e.target.files[0] : null) }} accept=".pdf" />
-            <textarea onChange={(e) => setDescription(e.target.value)} placeholder="description" cols={4} rows={4} ></textarea>
+            <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="description" cols={4} rows={4} ></textarea>
             <select onChange={(e) => setClassName(e.target.value)}>
                 <option value="Computer Networks">Computer Networks</option>
                 <option value="Software Requirement Engineering">Software Requirement Engineering</option>
