@@ -13,6 +13,7 @@ function DisplayLecture() {
         const fetchData = async () => {
             const response = await axios.get(`${PRO_URL}/api/pdf/${id}`)
             setData(response.data.pdf)
+            console.log('response.data.pdf: ', response.data.pdf);
         }
         fetchData()
     })

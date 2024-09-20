@@ -11,7 +11,7 @@ export default function Forth() {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(`${PRO_URL}/api/pdf/subject/${subject}`);
-            setData(response.data)
+            setData(response.data.pdf)
         }
         fetchData()
     }, [])
