@@ -2,16 +2,16 @@
 import React, { useState } from 'react'
 import "./assignment.css"
 import axios from 'axios'
-import { DEV_URL } from '../envFiles/env'
+import { DEV_URL, PRO_URL } from '../envFiles/env'
 function Assignment() {
     const [student, setStudent] = useState({})
     const [std, setStd] = useState([])
     const createStudent = async () => {
-        const students = await axios.post(`${DEV_URL}/api/student`, student)
+        const students = await axios.post(`${PRO_URL}/api/student`, student)
         console.log(students, "stedent created");
     }
     const getStudents = async () => {
-        const students = await axios.get(`${DEV_URL}/api/student`)
+        const students = await axios.get(`${PRO_URL}/api/student`)
         if (students.status === 200) {
             setStd(students.data)
         }
