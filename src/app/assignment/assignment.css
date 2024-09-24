@@ -1,0 +1,73 @@
+.assignment-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-content: center;
+    flex-direction: column;
+    /* border: 2px solid rgba(150, 42, 42, 0.9); */
+}
+.assignment-container  h1{
+    color: rgba(150, 42, 42, 0.9);
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.assignment-wrapper input{
+    border: 2px solid gray;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.assignment-wrapper{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+.assignment-container button{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgba(150, 42, 42, 0.9);
+    color: white;
+}
+
+.show-student-wrapp{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.border-black{
+    border: 2px solid red;
+    width: 100%;
+}
+.show-student-heading h1{
+    font-size: 20px;
+    border: 2px solid green;
+}
+.show-student-heading {
+    border: 2px solid black;
+    width: 100%;
+    min-width: 830px;
+}
+.show-students-container{
+    width: 100%;
+    border: 2px solid blue;
+}
