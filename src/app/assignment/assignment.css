@@ -55,19 +55,15 @@
 }
 
 .border-black{
-    border: 2px solid red;
     width: 100%;
 }
 .show-student-heading h1{
     font-size: 20px;
-    border: 2px solid green;
 }
 .show-student-heading {
-    border: 2px solid black;
     width: 100%;
     min-width: 830px;
 }
 .show-students-container{
     width: 100%;
-    border: 2px solid blue;
 }

@@ -7,11 +7,11 @@ function Assignment() {
     const [student, setStudent] = useState({})
     const [std, setStd] = useState([])
     const createStudent = async () => {
-        const students = await axios.post(`${PRO_URL}/api/student`, student)
+        const students = await axios.post(`${DEV_URL}/api/student`, student)
         console.log(students, "stedent created");
     }
     const getStudents = async () => {
-        const students = await axios.get(`${PRO_URL}/api/student`)
+        const students = await axios.get(`${DEV_URL}/api/student`)
         if (students.status === 200) {
             setStd(students.data)
         }
@@ -25,13 +25,14 @@ function Assignment() {
                 <input type="text" placeholder='Enter Your Last Name' onChange={(e) => setStudent({ ...student, lastname: e.target.value })} />
                 <input type="text" placeholder='Enter Your Roll Number' onChange={(e) => setStudent({ ...student, rollNo: e.target.value })} />
                 <input type="email" placeholder='Enter Your Email' onChange={(e) => setStudent({ ...student, email: e.target.value })} />
-                <input type="number" placeholder='Enter Your Phone Number' onChange={(e) => setStudent({ ...student, phoneNumber: e.target.value })} />
+                {/* <input type="number" placeholder='Enter Your Phone Number' onChange={(e) => setStudent({ ...student, phoneNumber: e.target.value })} /> */}
                 <button onClick={createStudent}>Create Student</button>
             </div>
             <div className='show-students-container'>
                 <button onClick={getStudents}>show students</button>
                 <div className="show-student-wrapp flex-col">
                     <div className='flex justify-between items-center show-student-heading'>
+                        <h1>S.No</h1>
                         <h1>First Name</h1>
                         <h1>Last Name</h1>
                         <h1>Email</h1>
@@ -39,9 +40,10 @@ function Assignment() {
                     </div>
 
                     {
-                        std && std.map((stud: any) => (
+                        std && std.map((stud: any, index: number) => (
 
-                            <div className='flex width-full justify-between border-1 border-black'>
+                            <div className='flex width-full justify-between border-1 border-black' key={index}>
+                                <h1>{index + 1}</h1>
                                 <h1>{stud.firstname}</h1>
                                 <h1>{stud.lastname}</h1>
                                 <h1>{stud.email}</h1>
