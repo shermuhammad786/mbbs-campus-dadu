@@ -1,12 +1,17 @@
+"use client"
 import axios from 'axios';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function OmdbApi() {
-    const fetchDAta = async () => {
-        const response = await axios.get(`https://omdb-api-hazel.vercel.app/home`);
-        console.log(response.data);
-    }
-    fetchDAta();
+    useEffect(() => {
+
+        const fetchDAta = async () => {
+            const response = await fetch(`https://omdb-api-hazel.vercel.app/home`);
+            const data = await response.json();
+            console.log(data);
+        }
+        fetchDAta();
+    })
     return (
         <div>
             this is omdb api pages
