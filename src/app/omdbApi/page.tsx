@@ -1,5 +1,6 @@
 "use client"
 import axios from 'axios';
+import Link from 'next/link';
 import React, { useEffect } from 'react'
 
 function OmdbApi() {
@@ -15,6 +16,7 @@ function OmdbApi() {
     return (
         <div>
             this is omdb api pages
+            <Link style={{color:"green"}} href={"/"}>go to home</Link>
         </div>
     )
 }
